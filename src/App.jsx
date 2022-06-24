@@ -1,4 +1,5 @@
 import "./App.css";
+import { BASE_URL } from "./common/settings";
 
 function App() {
   return (
@@ -6,7 +7,7 @@ function App() {
       <p>Hello React 123</p>
       <button
         onClick={async () => {
-          const response = await fetch("/api/");
+          const response = await fetch(`${BASE_URL}/api/`);
           let data = await response.json();
           console.log(data);
         }}
