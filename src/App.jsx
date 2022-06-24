@@ -6,9 +6,7 @@ function App() {
       <p>Hello React 123</p>
       <button
         onClick={async () => {
-          const response = await fetch(
-            "https://storeapp-api.herokuapp.com/api/",
-          );
+          const response = await fetch("/api/");
           let data = await response.json();
           console.log(data);
         }}
